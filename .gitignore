@@ -1,0 +1,39 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Logs
+logs/
+*.log
+
+# Diretórios de build
+dist/
+build/
+out/
+
+# Cache
+.cache/
+.vscode/
+.DS_Store
+*.env.local
+.env*
+
+# Arquivos do sistema
+Thumbs.db
+.idea/
+*.swp
+*.bak
+
+# Configurações específicas de SO
+*.iml
+.vscode/
+*.log
+
+# TypeScript
+*.tsbuildinfo
+
+# Outros
+coverage/
+*.lock
