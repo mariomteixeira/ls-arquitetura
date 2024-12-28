@@ -18,4 +18,6 @@ const WhatsAppIcon: React.FC = () => {
   );
 };
 
+// Upando
+
 export default WhatsAppIcon;
