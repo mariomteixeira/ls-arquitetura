@@ -1,5 +1,13 @@
 import React from "react";
-// import logo from "../assets/logo.png";
+import mainlogo from "../assets/logost/svg/Horizontal/HORIZONTAL - V1.svg";
+
+// Mapeamento de seções em português para IDs sem acento
+const sectionMap: Record<string, string> = {
+  Inicio: "home",
+  Projetos: "projects",
+  Sobre: "about",
+  Contato: "contact",
+};
 
 interface NavbarProps {
   activeSection: string;
@@ -7,62 +15,30 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
   return (
-    <nav className="bg-blue-steel flex justify-between items-center p-6 fixed top-0 w-full z-10">
+    <nav className="flex justify-between items-center p-6 fixed top-0 w-full z-10 transition-all duration-300">
       <div className="flex items-center">
-        <span className="text-white font-coralBlush text-3xl">
-          LS Arquitetura e Interiores
-        </span>
+        <img src={mainlogo} alt="Logo" className="w-72 h-20" />
       </div>
-      <ul className="flex space-x-6 list-none">
-        <li
-          className={`nav-item ${
-            activeSection === "home" ? "text-yellow-500" : "text-white"
-          }`}
-        >
-          <a
-            href="#home"
-            className="hover:text-gray-300 font-bebas-neue text-xl"
-          >
-            Início
-          </a>
-        </li>
-        <li
-          className={`nav-item ${
-            activeSection === "projects" ? "text-yellow-500" : "text-white"
-          }`}
-        >
-          <a
-            href="#projects"
-            className="hover:text-gray-300 font-bebas-neue text-xl"
-          >
-            Projetos
-          </a>
-        </li>
-        <li
-          className={`nav-item ${
-            activeSection === "about" ? "text-yellow-500" : "text-white"
-          }`}
-        >
-          <a
-            href="#about"
-            className="hover:text-gray-300 font-bebas-neue text-xl"
-          >
-            Sobre
-          </a>
-        </li>
-        <li
-          className={`nav-item ${
-            activeSection === "contact" ? "text-yellow-500" : "text-white"
-          }`}
-        >
-          <a
-            href="#contact"
-            className="hover:text-gray-300 font-bebas-neue text-xl"
-          >
-            Contato
-          </a>
-        </li>
-      </ul>
+
+      {activeSection !== "projects" && (
+        <ul className="flex space-x-4 list-none">
+          {["Inicio", "Projetos", "Sobre", "Contato"].map((section) => (
+            <li
+              key={section}
+              className={`nav-item ${
+                activeSection === section ? "text-white" : "text-blue-steel"
+              }`}
+            >
+              <a
+                href={`#${sectionMap[section]}`}
+                className="hover:text-white font-bebas-neue text-2xl"
+              >
+                {section}
+              </a>
+            </li>
+          ))}
+        </ul>
+      )}
     </nav>
   );
 };

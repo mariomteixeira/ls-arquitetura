@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Inicio from "./components/Inicio";
+import Projetos from "./components/Projetos";
+import Sobre from "./components/Sobre";
+import WhatsAppIcon from "./components/WhatsAppIcon"; // Importando o ícone do WhatsApp
 import "./App.css";
 
 const App: React.FC = () => {
@@ -31,16 +34,15 @@ const App: React.FC = () => {
       <Navbar activeSection={activeSection} />
       <div className="main-content">
         <Inicio />
-        <section id="projects" className="section h-screen">
-          Projetos
-        </section>
-        <section id="about" className="section h-screen">
-          Sobre
-        </section>
+        <Projetos />
+        <Sobre />
         <section id="contact" className="section h-screen">
           Contato
         </section>
       </div>
+
+      {/* Ícone do WhatsApp fixo no canto inferior esquerdo */}
+      <WhatsAppIcon />
     </div>
   );
 };

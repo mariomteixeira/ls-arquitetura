@@ -12,7 +12,7 @@ module.exports = {
       },
       colors: {
         "green-moss": "#4A734B",
-        "blue-steel": "#343B54",
+        "blue-steel": "#343C54",
       },
     },
   },

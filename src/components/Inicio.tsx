@@ -2,6 +2,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
+import "../css/inicio.css";
 
 import { Pagination, Autoplay } from "swiper/modules";
 
@@ -13,7 +14,7 @@ const images = [
 
 const Inicio: React.FC = () => {
   return (
-    <section id="home" className="section h-screen">
+    <section id="home" className="section min-h-[85vh]">
       <Swiper
         modules={[Pagination, Autoplay]}
         spaceBetween={30}

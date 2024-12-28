@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .fashion-slide {
+    @apply relative overflow-hidden rounded-lg shadow-lg transition-transform duration-500 ease-in-out;
+  }
+
+  .fashion-slide img {
+    @apply w-full h-auto object-cover;
+  }
+
+  .fashion-slide::after {
+    content: "";
+    @apply absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black to-transparent opacity-0 transition-opacity duration-500;
+  }
+
+  .swiper-slide-active .fashion-slide::after {
+    @apply opacity-40;
+  }
+
+  .swiper-slide-active .fashion-slide {
+    @apply scale-110 shadow-2xl;
+  }
+}
