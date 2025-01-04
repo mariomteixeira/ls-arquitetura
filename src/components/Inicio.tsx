@@ -4,7 +4,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "../css/inicio.css";
 
-import { Pagination, Autoplay } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 
 const images = [
   require("../assets/image1.jpg"),
@@ -16,12 +16,11 @@ const Inicio: React.FC = () => {
   return (
     <section id="home" className="section min-h-[85vh]">
       <Swiper
-        modules={[Pagination, Autoplay]}
+        modules={[Autoplay]}
         spaceBetween={30}
-        slidesPerView={1.5}
+        slidesPerView={1.1}
         centeredSlides={true}
         loop={true}
-        pagination={{ clickable: true }}
         autoplay={{ delay: 3000, disableOnInteraction: false }}
         speed={1000}
       >

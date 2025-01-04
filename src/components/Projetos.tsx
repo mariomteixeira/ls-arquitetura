@@ -64,10 +64,10 @@ const Projetos: React.FC = () => {
   return (
     <section
       id="projects"
-      className="section min-h-screen flex justify-center items-center scroll-mt-12"
+      className="section min-h-screen flex justify-center items-center scroll-mt-12 font-bebas-neue text-4xl text-blue-steel "
     >
-      <div className="container mx-auto px-4">
-        <p className="text-3xl text-center mb-2 text-white font-bebas-neue drop-shadow-[1px_1px_2px_rgba(0,0,0,0.9)]">
+      <div className="container mx-auto px-4 card">
+        <p className="text-3xl text-center mb-2 text-laranja-claro font-bebas-neue">
           Clique em nossos cards para ver mais detalhes
         </p>
         <ImageCard cards={cards} />

@@ -52,7 +52,7 @@ const ImageCard: React.FC<ImageCardProps> = ({ cards }) => {
               className="w-full h-64 object-cover"
             />
             <motion.div className="p-4 bg-white">
-              <h3 className="text-xl font-semibold">{card.title}</h3>
+              <h3 className="text-2xl tracking-[0.05em]">{card.title}</h3>
             </motion.div>
           </motion.div>
         ))}
@@ -61,7 +61,7 @@ const ImageCard: React.FC<ImageCardProps> = ({ cards }) => {
       <AnimatePresence>
         {selectedCard && (
           <motion.div
-            className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50"
+            className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -83,12 +83,16 @@ const ImageCard: React.FC<ImageCardProps> = ({ cards }) => {
               <p className="text-lg mt-2 text-center">
                 {selectedCard.description}
               </p>
-              <button
-                className="mt-6 px-6 py-3 bg-red-600 text-white rounded-md hover:bg-red-700 transition"
-                onClick={closeModal}
-              >
-                Fechar
-              </button>
+
+              {/* Centraliza o botão e impede que ele ultrapasse o modal */}
+              <div className="w-full flex justify-center">
+                <button
+                  className="mt-6 px-6 py-2 bg-laranja-claro text-white rounded-md hover:bg-laranja-claro transition text-xl max-w-[300px]"
+                  onClick={closeModal}
+                >
+                  Fechar
+                </button>
+              </div>
             </motion.div>
           </motion.div>
         )}

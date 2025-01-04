@@ -1,5 +1,5 @@
 import React from "react";
-import whatsappIcon from "../assets/whatsapp.png"; // Ícone do WhatsApp
+import whatsappIcon from "../assets/whatsapp_2.png"; // Ícone do WhatsApp
 
 const WhatsAppIcon: React.FC = () => {
   return (
@@ -12,7 +12,7 @@ const WhatsAppIcon: React.FC = () => {
       <img
         src={whatsappIcon}
         alt="Fale conosco pelo WhatsApp"
-        className="w-16 h-16"
+        className="w-12 h-12"
       />
     </a>
   );

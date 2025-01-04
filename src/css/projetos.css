@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  .card {
-    @apply bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-500;
-  }
+.card {
+  @apply bg-branco-gelo rounded-lg overflow-hidden transition-shadow duration-500;
 }

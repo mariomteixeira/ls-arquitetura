@@ -1,5 +1,5 @@
 import React from "react";
-import mainlogo from "../assets/logost/svg/Horizontal/HORIZONTAL - V1.svg";
+import mainlogo from "../assets/logost/svg/Horizontal/HORIZONTAL - V2-min.svg";
 
 // Mapeamento de seções em português para IDs sem acento
 const sectionMap: Record<string, string> = {
@@ -31,7 +31,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
             >
               <a
                 href={`#${sectionMap[section]}`}
-                className="hover:text-white font-bebas-neue text-2xl"
+                className="hover:text-laranja-claro font-bebas-neue text-2xl"
               >
                 {section}
               </a>

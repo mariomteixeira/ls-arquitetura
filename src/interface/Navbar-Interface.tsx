@@ -10,7 +10,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
       <ul className="flex space-x-6 list-none">
         <li
           className={`nav-item ${
-            activeSection === "home" ? "text-yellow-500" : "text-white"
+            activeSection === "home" ? "text-yellow-500" : "text-laranja-claro"
           }`}
         >
           <a href="#home" className="hover:text-gray-300">
@@ -19,7 +19,9 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
         </li>
         <li
           className={`nav-item ${
-            activeSection === "projects" ? "text-yellow-500" : "text-white"
+            activeSection === "projects"
+              ? "text-yellow-500"
+              : "text-laranja-claro"
           }`}
         >
           <a href="#projects" className="hover:text-gray-300">
@@ -28,7 +30,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
         </li>
         <li
           className={`nav-item ${
-            activeSection === "about" ? "text-yellow-500" : "text-white"
+            activeSection === "about" ? "text-yellow-500" : "text-laranja-claro"
           }`}
         >
           <a href="#about" className="hover:text-gray-300">
@@ -37,7 +39,9 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
         </li>
         <li
           className={`nav-item ${
-            activeSection === "contact" ? "text-yellow-500" : "text-white"
+            activeSection === "contact"
+              ? "text-yellow-500"
+              : "text-laranja-claro"
           }`}
         >
           <a href="#contact" className="hover:text-gray-300">

@@ -5,6 +5,7 @@ import Projetos from "./components/Projetos";
 import Sobre from "./components/Sobre";
 import WhatsAppIcon from "./components/WhatsAppIcon"; // Importando o ícone do WhatsApp
 import "./App.css";
+import "./css/inicio.css";
 
 const App: React.FC = () => {
   const [activeSection, setActiveSection] = useState<string>("home");
